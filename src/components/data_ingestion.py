@@ -5,9 +5,11 @@ from src.logger import logging
 import pandas as pd
 
 from sklearn.model_selection import train_test_split
-from dataclasses import dataclass  #this is used to create class variable
+from dataclasses import dataclass  # A decorator that simplifies the process of creating classes by automatically generating special methods like __init__()
 
-@dataclass
+from src.components.data_transformation import DataTransformation, DataTransformationConfig
+
+@dataclass   #Automatically generates methods like __init__ for the class
 class DataIngestionConfig:     #this is called becoz data ingestion requires some kind of input
     train_data_path: str=os.path.join('artifact',"train.csv")  #it will save the data inestion train.scv file in tthis path
     test_data_path: str=os.path.join('artifact',"test.csv")
@@ -47,7 +49,10 @@ class DataIngestion:
 #for execution of the code
 if __name__ == "__main__":
     obj=DataIngestion()
-    obj.initiate_data_ingestion()
+    train_data,test_data=obj.initiate_data_ingestion()
+
+    data_transformation=DataTransformation()
+    data_transformation.initiate_data_transformation(train_data,test_data)
 
 
 
@@ -56,3 +61,6 @@ if __name__ == "__main__":
 #Read the dataset as dataframe
 #Train test split initiated
 #Ingestion of the data is completed
+
+
+"""This code performs data ingestion by reading a dataset, splitting it into training and testing sets, and saving those sets in specific file paths. The process is logged, and custom exception handling is in place to capture any errors that may occur during execution."""
