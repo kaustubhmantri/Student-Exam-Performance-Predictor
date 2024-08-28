@@ -1,0 +1,91 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #74b9ff, #a29bfe);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.login {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.login h1 {
+    font-size: 26px;
+    margin-bottom: 25px;
+    color: #2d3436;
+    text-align: center;
+    width: 100%;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.mb-3 {
+    flex: 1 1 calc(33% - 20px); /* Each element takes up one third of the width minus some space for margins */
+    margin-bottom: 20px;
+    text-align: left;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.full-width {
+    flex: 1 1 100%; /* Takes full width */
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #2d3436;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #dfe6e9;
+    background-color: #f1f2f6;
+    transition: border-color 0.3s;
+}
+
+.form-control:focus {
+    border-color: #0984e3;
+    outline: none;
+    box-shadow: 0 0 5px rgba(9, 132, 227, 0.5);
+}
+
+.btn {
+    display: block;
+    width: 100%; /* Full width */
+    padding: 12px;
+    font-size: 18px;
+    color: #fff;
+    background: linear-gradient(135deg, #0984e3, #6c5ce7);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #6c5ce7, #0984e3);
+}
+
+h2 {
+    margin-top: 0px;
+    font-size: 20px;
+    color: #2d3436;
+    text-align: center;
+    width: 100%;
+}

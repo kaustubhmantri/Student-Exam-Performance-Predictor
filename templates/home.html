@@ -1,12 +1,12 @@
 <html>
+    <head><link rel="stylesheet" type="text/css" href="static\style.css">
+    </head>
 <body>
     <div class="login">
-       <h1>Student Exam Performance Indicator</h1>
+       <h1>Student Exam Performance Predictor</h1>
    
        <form action="{{ url_for('predict_datapoint')}}" method="post">
-        <h1>
-            <legend>Student Exam Performance Prediction</legend>
-        </h1>
+        
         <div class="mb-3">
             <label class="form-label">Gender</label>
             <select class="form-control" name="gender" placeholder="Enter you Gender" required>
@@ -100,12 +100,12 @@
             <input class="form-control" type="number" name="writing_score"
                 placeholder="Enter your Reading Score" min='0' max='100' />
         </div>
-        <div class="mb-3">
+        <div class="mb-3 full-width">
             <input class="btn btn-primary" type="submit" value="Predict your Maths Score" required />
         </div>
     </form>
-    <h2>
-       The  prediction is {{results}}
-    </h2>
+    <div class="mb-3 full-width">
+        <h2>The prediction is {{results}}</h2>
+    </div>
    <body>
 </html>
