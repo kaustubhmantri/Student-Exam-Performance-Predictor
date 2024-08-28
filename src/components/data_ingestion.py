@@ -8,6 +8,8 @@ from sklearn.model_selection import train_test_split
 from dataclasses import dataclass  # A decorator that simplifies the process of creating classes by automatically generating special methods like __init__()
 
 from src.components.data_transformation import DataTransformation, DataTransformationConfig
+from src.components.model_trainer import ModelTrainerConfig, ModelTrainer
+
 
 @dataclass   #Automatically generates methods like __init__ for the class
 class DataIngestionConfig:     #this is called becoz data ingestion requires some kind of input
@@ -52,7 +54,10 @@ if __name__ == "__main__":
     train_data,test_data=obj.initiate_data_ingestion()
 
     data_transformation=DataTransformation()
-    data_transformation.initiate_data_transformation(train_data,test_data)
+    train_arr,test_arr,_=data_transformation.initiate_data_transformation(train_data,test_data)
+
+    modeltrainer = ModelTrainer()
+    print(modeltrainer.initiate_model_trainer(train_arr,test_arr))
 
 
 

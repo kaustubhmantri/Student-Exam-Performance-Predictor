@@ -104,7 +104,7 @@ class DataTransformation:
 
             logging.info(f"Saved preprocessing object.")
 
-            save_object(
+            save_object(                  #class stored in utils.py
 
                 file_path=self.data_transformation_config.preprocessor_ob_file_path,
                 obj=preprocessing_obj
@@ -121,4 +121,4 @@ class DataTransformation:
             raise CustomException(e,sys)
             
 
-
+'''The code is designed for end-to-end data transformation, including handling missing values, scaling features, and encoding categorical variables. The transformed data is then used for model training and testing, with the entire process modularized for reuse and logging.'''
