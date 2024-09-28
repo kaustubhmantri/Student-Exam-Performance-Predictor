@@ -61,5 +61,9 @@ Insights into data distribution and feature relationships through EDA and Featur
 Predict Pipeline:
 Implements a prediction pipeline to make performance predictions based on the trained model.
 ```
-
+### Techstack used:
+- Python
+- Scikit-learn (Predictive Modeling)
+- Flask
+- AWS Elastic Beanstalk
 
